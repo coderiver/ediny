@@ -1,0 +1,177 @@
+.title
+    margin-bottom: 27px
+    border-bottom: 1px solid $gray 
+    padding-bottom: 7px
+    letter-spacing: 1px 
+    font-weight: normal
+    text-transform: uppercase
+    font-size: 14px
+    +font
+    span
+        color: $blue 
+.l-col-wrap
+    padding: 25px 20px 25px 23px
+    +clr   
+.l-col
+    float: left
+    border-right: 1px solid $gray
+    padding-right: 23px
+    margin-right: -1px
+    width: 735px
+    +box
+    > .title
+        margin-top: -25px
+.l-col_article
+    padding: 0 51px 0 23px 
+.sidebar
+    float: left
+    border-left: 1px solid $gray
+    padding-left: 20px
+    width: 223px
+    +box
+.meta
+    +clr
+.comment-link
+    position: relative
+    float: left
+    margin-top: 6px
+    letter-spacing: 1px
+    padding-left: 33px
+    color: #6d6c6c 
+    +font
+    text-transform: uppercase
+    font-size: 9px
+    +tr(color .2s linear)
+    &:hover
+        color: $blue 
+    &:before
+        content: ""
+        position: absolute
+        left: 3px
+        top: -3px
+        +s(com) 
+.share
+    float: right
+    font-size: 0
+    a,span
+        display: inline-block
+        vertical-align: middle
+    span
+        margin: 3px 21px 0 0
+        font-size: 9px
+        text-transform: uppercase
+        +font
+    a
+        margin-left: 3px
+        &:active
+            position: relative
+            top: 1px
+.share__fb
+    +s(share-fb)
+.share__vk
+    +s(share-vk)
+.share__tw
+    +s(share-tw)
+.share__yt
+    +s(share-yt)
+.share__rss 
+    +s(share-rss)   
+   
+.input-wrap
+    position: relative
+    margin-bottom: 32px
+    &.is-valid-error
+        .input
+            border-color: #e07e7e
+    &.is-valid-ok
+        .input
+            border-color: #09c500
+.input-wrap__title
+    display: block
+    margin-bottom: 10px
+    font-size: 14px
+    +font
+    text-transform: uppercase
+.input-wrap__error
+    position: absolute
+    bottom: -20px
+    left: 0
+    color: #e07e7e
+.input
+    display: block
+    padding: 0 13px 
+    width: 100%
+    height: 28px
+    border: 1px solid #caccce
+    +box
+    background: #fff 
+    box-shadow: 0 0 7px rgba(0,3,1,.13)
+    +tr(all .2s linear)
+    &:focus
+        box-shadow: none
+    &:hover
+        border-color: #aaa
+    +placeholder
+        color: #b9b9b9 
+        font-family: "Calibri", Arial,sans-serif 
+.textarea
+    padding: 13px 
+    min-height: 83px
+    max-height: 120px
+    resize: vertical
+.btn
+    display: inline-block
+    padding: 8px 20px 7px
+    font-size: 14px
+    color: #fff
+    font-weight: bold
+    +border-radius(6px)
+    text-shadow: 0 -1px 2px rgba(0,0,0,.2)  
+    &:hover
+        +opacity(.9)
+    &:active
+        position: relative
+        top: 1px
+        border-bottom-color: transparent 
+.btn_blue
+    background: #2daebf 
+    border-bottom: 1px solid #228390 
+.afisha
+    margin-top: 70px
+    &:first-child
+        margin-top: -24px
+    &:last-child
+        margin-bottom: 22px
+.afisha__top
+    position: relative
+    margin-bottom: 25px
+    padding-left: 20px
+    font-size: 12px
+    color: #323131
+    letter-spacing: 1.2px 
+    text-transform: uppercase
+    +font
+    i
+        position: absolute
+        left: -21px
+        top: -14px
+        background: #fff 
+        height: 39px
+        width: 26px
+        &:before
+            content: "" 
+            position: absolute
+            top: 11px
+            left: 0
+            +s(alert)
+.afisha__title
+    margin-bottom: 4px
+    font-size: 13px
+    font-weight: normal
+.afisha__img
+    overflow: hidden
+    display: block
+    margin-top: 15px
+    img
+        display: block
+        border: 1px solid #d5d2d2

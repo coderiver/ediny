@@ -16,7 +16,8 @@ $breaklarge: 1180px
 =fs($sizeValue: 16)
 	font-size: $sizeValue + px
 	font-size: $sizeValue / 10 + rem
-
+=font
+	font-family: "Cambria", Arial, serif 
 =text-overflow
 	overflow: hidden
 	-ms-text-overflow: ellipsis
@@ -47,16 +48,16 @@ $breaklarge: 1180px
 =gh($color1, $color2)
 	+background-image(linear-gradient(left, $color1, $color2))
 
-//asdfast font-family
-=font($alias, $name)
-	@font-face
-		font-family: $alias
-		src: url("fonts/" + $name + ".eot")
-		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
-		font-weight: normal
-		font-style: normal
+// //asdfast font-family
+// =font($alias, $name)
+// 	@font-face
+// 		font-family: $alias
+// 		src: url("fonts/" + $name + ".eot")
+// 		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
+// 		font-weight: normal
+// 		font-style: normal
 
-//+font(black, cytiapro-black-webfont)
+// //+font(black, cytiapro-black-webfont)
 
 // ROTATE
 =rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0)

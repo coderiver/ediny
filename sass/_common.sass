@@ -1,49 +1,161 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+$brown: #5a5a5a
+$gray: #cfcfcf
+$blue: #78c0d6
+html
+	+scrollbar
+		width: 14px
+	+scrollbar-track	
+		background: #bec3c3
+	+scrollbar-thumb
+		background: #bec3c3
+	+scrollbar-track-piece 
+		background: #e1e1e1
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
+	min-width: 1020px
+	color: $brown 
+	font: normal 14px/1.2 "Calibri", Arial, sans-serif
+	background: #4f4f4f url(../img/bg.png) 0 0 repeat 
+a
+	text-decoration: none
+	color: $blue 
+.l-layout	 
+	margin: 0 auto -98px
+	width: 1000px 
+	position: relative
+	min-height: 100%
+	height: auto !important
+	height: 100% 
+	background: #fff 
+.wrapper
+	overflow: hidden
+.wrap
+	+clr
+.push
+	clear: both
+	height: 98px
+.l-container
+	padding: 0 20px
+	
+.header
+	margin-bottom: 37px
+.header__top
+	height: 39px
+	line-height: 39px
+	background: #323030  
+	.l-container
+		+clr
+.header__title
+	float: left
+	+font
+	color: #cccaca
+	font-size: 12px
+	text-shadow: 0 2px 1px rgba(0,0,0,.75)
 
-
-// common blocks
+.soc
+	float: right
+	font-size: 0
+.soc__link
+	display: inline-block
+	margin-left: 15px
+	vertical-align: middle
+	&:active
+		position: relative
+		top: 1px
+.soc__fb
+	+s(soc-fb)
+.soc__tw
+	+s(soc-tw)
+.soc__vk
+	+s(soc-vk)
+.soc__in
+	+s(soc-in)
+.logo
+	display: block
+	margin: 20px auto 15px
+	+s(logo)
+.nav
+	position: relative
+	z-index: 2
+	border-top: 1px solid $gray  
+	border-bottom: 1px solid $gray
+	text-align: center
+.nav__item
+	position: relative
+	padding: 8px 0 
+	display: inline-block
+	&.is-active
+		a
+			color: $blue
+	a
+		display: block
+		position: relative
+		border-right: 1px solid $gray 
+		padding: 7px 34px 
+		color: #6d6c6c
+		font-size: 12px
+		text-transform: uppercase
+		+font 
+		+tr(color .2s linear)
+		&:hover
+			color: $blue 
+.subnav
+	position: absolute
+	padding: 35px 0 33px
+	top: 100%
+	left: 22px
+	width: 285px
+	+box
+	background: #fff
+	+box-shadow(0 1px 5px rgba(0,0,0,.36))
+	+clr
+.subnav__col
+	float: left
+	padding-left: 29px
+	width: 50%
+	+box
+	font-size: 10px
+	+font	
+	text-transform: uppercase
+	border-left: 1px solid $gray 
+	text-align: left
+	&:first-child
+		border-left: 0
+	ul
+		border-right: 0
+	li
+		margin-bottom: 4px
+	a
+		padding: 0
+		font-size: 10px
+		border-right: 0
+		&:after
+			display: none
+.subnav__title
+	margin-bottom: 24px
+	color: #000 
+.nav__item-extend
+	a
+		&:after
+			content: ""
+			position: absolute
+			right: 20px
+			top: 50%
+			margin-top: -6px
+			+s(arr1)
+.footer
+	position: relative
+	margin: 0 auto 
+	min-height: 98px
+	font-size: 13px
+	padding: 0 20px 0
+	width: 1000px
+	+box
+.footer__in
+	+clr
+	border-top: 1px solid $gray 
+	padding-top: 33px
+.footer__search
+	float: left
+	width: 342px
+.footer__info
+	float: right
