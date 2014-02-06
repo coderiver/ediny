@@ -83,6 +83,9 @@ a
 	position: relative
 	padding: 8px 0 
 	display: inline-block
+	&:hover
+		.subnav
+			display: block
 	&.is-active
 		a
 			color: $blue
@@ -100,6 +103,7 @@ a
 			color: $blue 
 .subnav
 	position: absolute
+	display: none
 	padding: 35px 0 33px
 	top: 100%
 	left: 22px
