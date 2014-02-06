@@ -5,7 +5,9 @@
 	<title>Index</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/scripts.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body>
 
@@ -21,33 +23,13 @@
 			</div>
 		</div>
 		<a href="#" class="logo"></a>
-		<div class="l-container">
-			<ul class="nav">
+		<div class="l-container nav-wrap">
+			<ul class="nav js-nav">
 				<li class="nav__item">
 					<a href="#">Главная</a>
 				</li>
-				<li class="nav__item nav__item-extend">
+				<li class="nav__item js-show-subnav">
 					<a href="#">семинары</a>
-					<div class="subnav">
-						<div class="subnav__col">
-							<div class="subnav__title">Текущие</div>
-							<ul>
-								<li><a href="#">МНОГО</a></li>
-								<li><a href="#">Весьма</a></li>
-								<li><a href="#">ИнтересныХ</a></li>
-								<li><a href="#">СОБЫТИЙ</a></li>
-							</ul>
-						</div>
-						<div class="subnav__col">
-							<div class="subnav__title">АРХИВ</div>
-							<ul>
-								<li><a href="#">2014</a></li>
-								<li><a href="#">2013</a></li>
-								<li><a href="#">2012</a></li>
-								<li><a href="#">2011</a></li>
-							</ul>
-						</div>
-					</div>
 				</li>
 				<li class="nav__item">
 					<a href="#">концертные туры</a>
@@ -55,7 +37,27 @@
 				<li class="nav__item">
 					<a href="#">О нас</a>
 				</li>
-			</ul>     
+			</ul>   
+			<div class="subnav js-subnav">
+				<div class="subnav__col">
+					<div class="subnav__title">Текущие</div>
+					<ul>
+						<li><a href="#">МНОГО</a></li>
+						<li><a href="#">Весьма</a></li>
+						<li><a href="#">ИнтересныХ</a></li>
+						<li><a href="#">СОБЫТИЙ</a></li>
+					</ul>
+				</div>
+				<div class="subnav__col">
+					<div class="subnav__title">АРХИВ</div>
+					<ul>
+						<li><a href="#">2014</a></li>
+						<li><a href="#">2013</a></li>
+						<li><a href="#">2012</a></li>
+						<li><a href="#">2011</a></li>
+					</ul>
+				</div>
+			</div>  
 		</div>                                                    
 	</header>
 	<div class="l-col-wrap">
